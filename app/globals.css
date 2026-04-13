@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+h1, .font-bodoni {
+  font-family: var(--font-bodoni), serif !important;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #ffffff;
+}
+
+
+button:hover{
+    background-color: #000000;
+    color: #ffffff;
+    transition: 0.3s;
+    
+}
+
+/* Merapikan posisi dan warna navigasi Swiper */
+:root {
+  --swiper-theme-color: #2563eb; /* Warna utama (Biru) */
+  --swiper-navigation-size: 30px; /* Mengecilkan ukuran panah */
+}
+
+/* Sembunyikan panah di layar kecil (Mobile) agar lebih bersih */
+@media (max-width: 768px) {
+  .swiper-button-next, .swiper-button-prev {
+    display: none;
+  }
+}
+
+/* Membuat titik pagination lebih elegan */
+.swiper-pagination-bullet {
+  background: #ffffff !important;
+  opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  width: 25px !important; /* Membuat titik yang aktif jadi memanjang */
+  border-radius: 5px !important;
+}
+/* 
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+} */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #000000;
+  }
+}
+
+/* body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+} */
